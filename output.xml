@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.0 on win32)" generated="2025-06-08T23:13:27.509931" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework Task-20" source="C:\Users\vidhy\PycharmProjects\RobotFramework_Task-20">
+<suite id="s1-s1" name="TestCases" source="C:\Users\vidhy\PycharmProjects\RobotFramework_Task-20\TestCases">
+<suite id="s1-s1-s1" name="TestSauceDemo" source="C:\Users\vidhy\PycharmProjects\RobotFramework_Task-20\TestCases\TestSauceDemo.robot">
+<test id="s1-s1-s1-t1" name="TestCase-2" line="21">
+<kw name="Open SauceLab Demo Page" owner="LoginPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:28.286684" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-08T23:13:28.286305" elapsed="2.225683"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-08T23:13:30.512290" elapsed="0.041713"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:13:30.554545" elapsed="0.003205"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:30.718293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:13:30.558243" elapsed="0.160454"/>
+</kw>
+<tag>LoginPage</tag>
+<tag>Start</tag>
+<doc>Open browser and navigate to Login page</doc>
+<status status="PASS" start="2025-06-08T23:13:28.285286" elapsed="2.433841"/>
+</kw>
+<kw name="Login with Invalid credential" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:30.724235" level="INFO">Typing text 'standard_user_1' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:13:30.722812" elapsed="0.293239"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:31.016731" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-06-08T23:13:31.092461" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:13:31.016345" elapsed="0.244695"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:31.261773" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:13:31.261405" elapsed="0.241885"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:31.535749" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:13:31.503943" elapsed="0.032025"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:13:31.735016" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/UnSuccessLogin_page.png"&gt;&lt;img src="../Screenshots/UnSuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/UnSuccessLogin_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:13:31.536389" elapsed="0.198884"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:13:34.736957" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:13:31.735680" elapsed="3.001582"/>
+</kw>
+<tag>Login Page</tag>
+<doc>Login with Valid credentials</doc>
+<status status="PASS" start="2025-06-08T23:13:30.721611" elapsed="4.015884"/>
+</kw>
+<kw name="Shutdown Automation" owner="LoginPage">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-08T23:13:34.739886" elapsed="2.276542"/>
+</kw>
+<tag>Stop</tag>
+<doc>Shutdown all browser</doc>
+<status status="PASS" start="2025-06-08T23:13:34.739203" elapsed="2.277661"/>
+</kw>
+<status status="PASS" start="2025-06-08T23:13:28.283990" elapsed="8.735067"/>
+</test>
+<doc>Test Suit for SauceLab Demo Login</doc>
+<status status="PASS" start="2025-06-08T23:13:27.585838" elapsed="9.436945"/>
+</suite>
+<status status="PASS" start="2025-06-08T23:13:27.582395" elapsed="9.444562"/>
+</suite>
+<status status="PASS" start="2025-06-08T23:13:27.512243" elapsed="9.518078"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotFramework Task-20" id="s1" pass="1" fail="0" skip="0">RobotFramework Task-20</stat>
+<stat name="TestCases" id="s1-s1" pass="1" fail="0" skip="0">RobotFramework Task-20.TestCases</stat>
+<stat name="TestSauceDemo" id="s1-s1-s1" pass="1" fail="0" skip="0">RobotFramework Task-20.TestCases.TestSauceDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

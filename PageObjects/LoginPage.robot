@@ -34,7 +34,7 @@ Login with Invalid credential
     Input Text    id=user-name    ${INVALID_USERNAME}
     Input Password    id=password    ${INVALID_PASSWORD}
     Click Button    id=login-button
-    Page Should Not Contain    Products
+    Page Should Contain    Epic sadface: Username and password do not match any user in this service
     Capture Page Screenshot    ../Screenshots/UnSuccessLogin_page.png
     Sleep    3s
     

@@ -1,185 +1,735 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.0 on win32)" generated="2025-06-07T23:49:08.509485" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.0 on win32)" generated="2025-06-08T23:14:48.765296" rpa="false" schemaversion="5">
 <suite id="s1" name="TestSauceDemo" source="C:\Users\vidhy\PycharmProjects\RobotFramework_Task-20\TestCases\TestSauceDemo.robot">
-<test id="s1-t1" name="TestCase-1" line="7">
+<test id="s1-t1" name="TestCase-1" line="16">
 <kw name="Open SauceLab Demo Page" owner="LoginPage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:09.271617" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-06-08T23:14:49.513588" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-07T23:49:09.270780" elapsed="2.378464"/>
+<status status="PASS" start="2025-06-08T23:14:49.513098" elapsed="1.493057"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-07T23:49:11.649819" elapsed="0.067754"/>
+<status status="PASS" start="2025-06-08T23:14:51.006511" elapsed="0.583425"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-06-07T23:49:11.717955" elapsed="0.005282"/>
+<status status="PASS" start="2025-06-08T23:14:51.590290" elapsed="0.003072"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:11.865316" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-08T23:14:51.744811" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../Screenshots/Login_page.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-07T23:49:11.723839" elapsed="0.141724"/>
+<status status="PASS" start="2025-06-08T23:14:51.594098" elapsed="0.150941"/>
 </kw>
 <tag>LoginPage</tag>
 <tag>Start</tag>
 <doc>Open browser and navigate to Login page</doc>
-<status status="PASS" start="2025-06-07T23:49:09.269135" elapsed="2.596675"/>
+<status status="PASS" start="2025-06-08T23:14:49.511551" elapsed="2.233749"/>
 </kw>
 <kw name="Login with Valid credential" owner="LoginPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:11.868572" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-06-08T23:14:51.747996" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:11.867748" elapsed="0.292211"/>
+<status status="PASS" start="2025-06-08T23:14:51.747045" elapsed="0.272840"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:12.160670" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2025-06-07T23:49:12.231074" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-06-08T23:14:52.020993" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-06-08T23:14:52.123836" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:12.160248" elapsed="0.324988"/>
+<status status="PASS" start="2025-06-08T23:14:52.020316" elapsed="0.280017"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:12.486143" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-06-08T23:14:52.300935" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:12.485739" elapsed="0.339633"/>
+<status status="PASS" start="2025-06-08T23:14:52.300643" elapsed="0.262907"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:12.858478" level="INFO">Current page contains text 'Products'.</msg>
+<msg time="2025-06-08T23:14:52.591107" level="INFO">Current page contains text 'Products'.</msg>
 <arg>Products</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-07T23:49:12.825682" elapsed="0.033001"/>
+<status status="PASS" start="2025-06-08T23:14:52.564130" elapsed="0.027141"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:13.202676" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/SuccessLogin_page.png"&gt;&lt;img src="../Screenshots/SuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-08T23:14:52.906018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/SuccessLogin_page.png"&gt;&lt;img src="../Screenshots/SuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../Screenshots/SuccessLogin_page.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-07T23:49:12.858968" elapsed="0.344010"/>
+<status status="PASS" start="2025-06-08T23:14:52.591536" elapsed="0.314736"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-07T23:49:16.204692" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-06-08T23:14:55.907505" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-07T23:49:13.203386" elapsed="3.001686"/>
+<status status="PASS" start="2025-06-08T23:14:52.906600" elapsed="3.001346"/>
 </kw>
 <tag>Login Page</tag>
 <doc>Login with Valid credentials</doc>
-<status status="PASS" start="2025-06-07T23:49:11.867116" elapsed="4.338374"/>
+<status status="PASS" start="2025-06-08T23:14:51.746381" elapsed="4.161824"/>
 </kw>
 <kw name="Shutdown Automation" owner="LoginPage">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-06-07T23:49:16.207552" elapsed="2.275923"/>
+<status status="PASS" start="2025-06-08T23:14:55.909995" elapsed="2.263309"/>
 </kw>
 <tag>Stop</tag>
 <doc>Shutdown all browser</doc>
-<status status="PASS" start="2025-06-07T23:49:16.206898" elapsed="2.277034"/>
+<status status="PASS" start="2025-06-08T23:14:55.909438" elapsed="2.264214"/>
 </kw>
-<status status="PASS" start="2025-06-07T23:49:09.267514" elapsed="9.217444"/>
+<status status="PASS" start="2025-06-08T23:14:49.509972" elapsed="8.664827"/>
 </test>
-<test id="s1-t2" name="TestCase-2" line="12">
+<test id="s1-t2" name="TestCase-2" line="21">
 <kw name="Open SauceLab Demo Page" owner="LoginPage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:18.489757" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-06-08T23:14:58.180588" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-07T23:49:18.489328" elapsed="2.272265"/>
+<status status="PASS" start="2025-06-08T23:14:58.179652" elapsed="2.128488"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-07T23:49:20.761996" elapsed="0.066508"/>
+<status status="PASS" start="2025-06-08T23:15:00.309192" elapsed="0.061211"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-06-07T23:49:20.829501" elapsed="0.008696"/>
+<status status="PASS" start="2025-06-08T23:15:00.370848" elapsed="0.002129"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:21.024034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-08T23:15:00.563577" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>../Screenshots/Login_page.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-07T23:49:20.839135" elapsed="0.185134"/>
+<status status="PASS" start="2025-06-08T23:15:00.373415" elapsed="0.190574"/>
 </kw>
 <tag>LoginPage</tag>
 <tag>Start</tag>
 <doc>Open browser and navigate to Login page</doc>
-<status status="PASS" start="2025-06-07T23:49:18.488769" elapsed="2.535716"/>
+<status status="PASS" start="2025-06-08T23:14:58.178882" elapsed="2.385340"/>
 </kw>
 <kw name="Login with Invalid credential" owner="LoginPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:21.027205" level="INFO">Typing text 'standard_user_1' into text field 'id=user-name'.</msg>
+<msg time="2025-06-08T23:15:00.566649" level="INFO">Typing text 'standard_user_1' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${INVALID_USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:21.026617" elapsed="0.286606"/>
+<status status="PASS" start="2025-06-08T23:15:00.566123" elapsed="0.357914"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:21.314904" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2025-06-07T23:49:21.388048" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-06-08T23:15:00.925912" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-06-08T23:15:01.024462" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>${INVALID_PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:21.313812" elapsed="0.300089"/>
+<status status="PASS" start="2025-06-08T23:15:00.925139" elapsed="0.362458"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:21.614719" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-06-08T23:15:01.288863" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-07T23:49:21.614296" elapsed="0.246670"/>
+<status status="PASS" start="2025-06-08T23:15:01.288241" elapsed="0.241467"/>
 </kw>
-<kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:41.919824" level="INFO">Current page does not contain text 'Products'.</msg>
-<arg>Products</arg>
-<doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2025-06-07T23:49:21.861610" elapsed="20.058409"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:01.581562" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:01.530349" elapsed="0.051476"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-07T23:49:42.151791" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="..Screenshots/UnSuccessLogin_page.png"&gt;&lt;img src="..Screenshots/UnSuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>..Screenshots/UnSuccessLogin_page.png</arg>
+<msg time="2025-06-08T23:15:01.769080" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/UnSuccessLogin_page.png"&gt;&lt;img src="../Screenshots/UnSuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/UnSuccessLogin_page.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-07T23:49:41.920661" elapsed="0.231611"/>
+<status status="PASS" start="2025-06-08T23:15:01.582282" elapsed="0.187043"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-07T23:49:45.154052" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-06-08T23:15:04.771165" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-07T23:49:42.152621" elapsed="3.001787"/>
+<status status="PASS" start="2025-06-08T23:15:01.769707" elapsed="3.001755"/>
 </kw>
 <tag>Login Page</tag>
 <doc>Login with Valid credentials</doc>
-<status status="PASS" start="2025-06-07T23:49:21.025876" elapsed="24.129222"/>
+<status status="PASS" start="2025-06-08T23:15:00.565349" elapsed="4.206403"/>
 </kw>
 <kw name="Shutdown Automation" owner="LoginPage">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-06-07T23:49:45.157451" elapsed="2.246977"/>
+<status status="PASS" start="2025-06-08T23:15:04.773580" elapsed="2.266960"/>
 </kw>
 <tag>Stop</tag>
 <doc>Shutdown all browser</doc>
-<status status="PASS" start="2025-06-07T23:49:45.156717" elapsed="2.247998"/>
+<status status="PASS" start="2025-06-08T23:15:04.773005" elapsed="2.267912"/>
 </kw>
-<status status="PASS" start="2025-06-07T23:49:18.487352" elapsed="28.918340"/>
+<status status="PASS" start="2025-06-08T23:14:58.177233" elapsed="8.864584"/>
+</test>
+<test id="s1-t3" name="TestCase-3" line="26">
+<kw name="Open SauceLab Demo Page" owner="LoginPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:07.045992" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-08T23:15:07.045561" elapsed="2.136506"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-08T23:15:09.183567" elapsed="0.088266"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:15:09.272655" elapsed="0.004554"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:09.472688" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:09.278196" elapsed="0.194876"/>
+</kw>
+<tag>LoginPage</tag>
+<tag>Start</tag>
+<doc>Open browser and navigate to Login page</doc>
+<status status="PASS" start="2025-06-08T23:15:07.044919" elapsed="2.428481"/>
+</kw>
+<kw name="Login with Valid credential" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:09.476289" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:09.475512" elapsed="0.344097"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:09.821220" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-06-08T23:15:09.958880" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:09.820285" elapsed="0.320248"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:10.141506" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:10.141013" elapsed="0.253496"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:10.420322" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:10.394847" elapsed="0.025702"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:10.685191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/SuccessLogin_page.png"&gt;&lt;img src="../Screenshots/SuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/SuccessLogin_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:10.420915" elapsed="0.264535"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:13.687918" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:10.685805" elapsed="3.002430"/>
+</kw>
+<tag>Login Page</tag>
+<doc>Login with Valid credentials</doc>
+<status status="PASS" start="2025-06-08T23:15:09.474634" elapsed="4.213900"/>
+</kw>
+<kw name="Add a Product to the Cart" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-08T23:15:13.690791" level="INFO">${Product_xpath} = //div[@class='inventory_item'][.//div[text()='Sauce Labs Backpack']]//button[contains(@id,'add-to-cart')]</msg>
+<var>${Product_xpath}</var>
+<arg>//div[@class='inventory_item'][.//div[text()='${Product_name}']]//button[contains(@id,'add-to-cart')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-08T23:15:13.690348" elapsed="0.000505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${Product_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-08T23:15:13.691082" elapsed="0.049120"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:13.741284" level="INFO">Clicking button 'xpath=//div[@class='inventory_item'][.//div[text()='Sauce Labs Backpack']]//button[contains(@id,'add-to-cart')]'.</msg>
+<arg>xpath=${Product_xpath}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:13.740601" elapsed="0.204521"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:13.945933" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:13.945530" elapsed="0.189485"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:15:14.135878" elapsed="0.004526"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:14.170863" level="INFO">Current page contains text 'Your Cart'.</msg>
+<arg>Your Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:14.140761" elapsed="0.030340"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:14.341384" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Product_Cart_Page.png"&gt;&lt;img src="../Screenshots/Product_Cart_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Product_Cart_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:14.171480" elapsed="0.170280"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:17.343416" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:14.342133" elapsed="3.001924"/>
+</kw>
+<arg>${Product}</arg>
+<tag>Cart Page</tag>
+<tag>Product Page</tag>
+<doc>Adding the Product to the Cart and validate it</doc>
+<status status="PASS" start="2025-06-08T23:15:13.689682" elapsed="3.654638"/>
+</kw>
+<kw name="Validate a Product in the Cart" owner="CartPage">
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:15:17.346115" elapsed="0.002910"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:17.386138" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>${Product_name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:17.349313" elapsed="0.037068"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:17.533250" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Cart_Page.png"&gt;&lt;img src="../Screenshots/Cart_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Cart_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:17.386750" elapsed="0.146791"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:20.535357" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:17.533966" elapsed="3.001736"/>
+</kw>
+<arg>${Product}</arg>
+<status status="PASS" start="2025-06-08T23:15:17.345417" elapsed="3.190620"/>
+</kw>
+<kw name="Shutdown Automation" owner="LoginPage">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-08T23:15:20.537915" elapsed="2.338587"/>
+</kw>
+<tag>Stop</tag>
+<doc>Shutdown all browser</doc>
+<status status="PASS" start="2025-06-08T23:15:20.537308" elapsed="2.339601"/>
+</kw>
+<status status="PASS" start="2025-06-08T23:15:07.043769" elapsed="15.834393"/>
+</test>
+<test id="s1-t4" name="TestCase-4" line="33">
+<kw name="Open SauceLab Demo Page" owner="LoginPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:22.882001" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-08T23:15:22.881430" elapsed="2.268522"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-08T23:15:25.150776" elapsed="0.092197"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:15:25.243706" elapsed="0.004350"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:25.399400" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Login_page.png"&gt;&lt;img src="../Screenshots/Login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:25.248729" elapsed="0.150855"/>
+</kw>
+<tag>LoginPage</tag>
+<tag>Start</tag>
+<doc>Open browser and navigate to Login page</doc>
+<status status="PASS" start="2025-06-08T23:15:22.880769" elapsed="2.519014"/>
+</kw>
+<kw name="Login with Valid credential" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:25.402381" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:25.401750" elapsed="0.297968"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:25.701357" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-06-08T23:15:25.785071" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:25.700340" elapsed="0.305077"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:26.006546" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:26.006034" elapsed="0.249963"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:26.283583" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:26.256584" elapsed="0.027252"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:26.585181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/SuccessLogin_page.png"&gt;&lt;img src="../Screenshots/SuccessLogin_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/SuccessLogin_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:26.284281" elapsed="0.301199"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:29.587073" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:26.585915" elapsed="3.001500"/>
+</kw>
+<tag>Login Page</tag>
+<doc>Login with Valid credentials</doc>
+<status status="PASS" start="2025-06-08T23:15:25.400800" elapsed="4.186900"/>
+</kw>
+<kw name="Add Multiple Product and checkout" owner="HomePage">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-08T23:15:29.590903" level="INFO">${Product_xpath} = //div[@class='inventory_item'][.//div[text()='Sauce Labs Backpack']]//button[contains(@id,'add-to-cart')]</msg>
+<var>${Product_xpath}</var>
+<arg>//div[@class='inventory_item'][.//div[text()='${Product}']]//button[contains(@id,'add-to-cart')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.590508" elapsed="0.000459"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${Product_xpath}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.591197" elapsed="0.053674"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:29.646242" level="INFO">Clicking element 'xpath=//div[@class='inventory_item'][.//div[text()='Sauce Labs Backpack']]//button[contains(@id,'add-to-cart')]'.</msg>
+<arg>xpath=${Product_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.645656" elapsed="0.163687"/>
+</kw>
+<var name="${Product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2025-06-08T23:15:29.590255" elapsed="0.219376"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-08T23:15:29.810838" level="INFO">${Product_xpath} = //div[@class='inventory_item'][.//div[text()='Sauce Labs Bike Light']]//button[contains(@id,'add-to-cart')]</msg>
+<var>${Product_xpath}</var>
+<arg>//div[@class='inventory_item'][.//div[text()='${Product}']]//button[contains(@id,'add-to-cart')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.810332" elapsed="0.000569"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${Product_xpath}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.811376" elapsed="0.049679"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:29.862065" level="INFO">Clicking element 'xpath=//div[@class='inventory_item'][.//div[text()='Sauce Labs Bike Light']]//button[contains(@id,'add-to-cart')]'.</msg>
+<arg>xpath=${Product_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:29.861476" elapsed="0.158325"/>
+</kw>
+<var name="${Product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2025-06-08T23:15:29.810025" elapsed="0.210005"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-08T23:15:30.021132" level="INFO">${Product_xpath} = //div[@class='inventory_item'][.//div[text()='Sauce Labs Fleece Jacket']]//button[contains(@id,'add-to-cart')]</msg>
+<var>${Product_xpath}</var>
+<arg>//div[@class='inventory_item'][.//div[text()='${Product}']]//button[contains(@id,'add-to-cart')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.020640" elapsed="0.000553"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${Product_xpath}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.021485" elapsed="0.060080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:30.082560" level="INFO">Clicking element 'xpath=//div[@class='inventory_item'][.//div[text()='Sauce Labs Fleece Jacket']]//button[contains(@id,'add-to-cart')]'.</msg>
+<arg>xpath=${Product_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.081982" elapsed="0.153267"/>
+</kw>
+<var name="${Product}">Sauce Labs Fleece Jacket</var>
+<status status="PASS" start="2025-06-08T23:15:30.020375" elapsed="0.215056"/>
+</iter>
+<var>${Product}</var>
+<value>@{Product_name}</value>
+<status status="PASS" start="2025-06-08T23:15:29.589846" elapsed="0.645694"/>
+</for>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:30.236306" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.235880" elapsed="0.196690"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.433135" elapsed="0.003682"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:30.474030" level="INFO">Current page contains text 'Your Cart'.</msg>
+<arg>Your Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.437239" elapsed="0.037011"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:30.659046" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Products_Cart_Page.png"&gt;&lt;img src="../Screenshots/Products_Cart_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Products_Cart_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.474609" elapsed="0.184672"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:33.661091" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:30.659655" elapsed="3.001758"/>
+</kw>
+<arg>@{Products}</arg>
+<tag>Cart Page</tag>
+<tag>Checkout Page</tag>
+<tag>Product Page</tag>
+<doc>Adding multiple Product to the Cart and validate it in the checkout page</doc>
+<status status="PASS" start="2025-06-08T23:15:29.589109" elapsed="4.072579"/>
+</kw>
+<kw name="Validate multiple Products the in Cart" owner="CartPage">
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.664139" elapsed="0.026527"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:33.717890" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.691065" elapsed="0.027207"/>
+</kw>
+<var name="${Product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2025-06-08T23:15:33.663911" elapsed="0.054615"/>
+</iter>
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.719200" elapsed="0.021188"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:33.762675" level="INFO">Current page contains text 'Sauce Labs Bike Light'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.740798" elapsed="0.022091"/>
+</kw>
+<var name="${Product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2025-06-08T23:15:33.718928" elapsed="0.044102"/>
+</iter>
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.763581" elapsed="0.024125"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:33.808552" level="INFO">Current page contains text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.788108" elapsed="0.020653"/>
+</kw>
+<var name="${Product}">Sauce Labs Fleece Jacket</var>
+<status status="PASS" start="2025-06-08T23:15:33.763324" elapsed="0.045570"/>
+</iter>
+<var>${Product}</var>
+<value>@{Products_name}</value>
+<status status="PASS" start="2025-06-08T23:15:33.663519" elapsed="0.145471"/>
+</for>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:33.980220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Cart_Page.png"&gt;&lt;img src="../Screenshots/Cart_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Cart_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.809416" elapsed="0.171044"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:36.981864" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:33.980868" elapsed="3.001294"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:36.983238" level="INFO">Clicking element 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:36.982520" elapsed="0.107327"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:40.091101" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:37.090207" elapsed="3.001192"/>
+</kw>
+<arg>@{Products}</arg>
+<status status="PASS" start="2025-06-08T23:15:33.662876" elapsed="6.429125"/>
+</kw>
+<kw name="Add checkout information" owner="CheckoutPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:40.094216" level="INFO">Typing text 'VidhyaPrakash' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:40.093751" elapsed="0.281095"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:40.375761" level="INFO">Typing text 'B' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:40.375255" elapsed="0.214589"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:40.591273" level="INFO">Typing text '641004' into text field 'id=postal-code'.</msg>
+<arg>id=postal-code</arg>
+<arg>${ZipCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:40.590474" elapsed="0.261007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:40.852859" level="INFO">Clicking element 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-08T23:15:40.852193" elapsed="0.200587"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-08T23:15:43.054603" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-08T23:15:41.053237" elapsed="2.001745"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Checkout: Overview</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.055434" elapsed="0.027570"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:43.108894" level="INFO">Current page contains text 'Checkout: Overview'.</msg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.083416" elapsed="0.025704"/>
+</kw>
+<tag>Checkout page</tag>
+<doc>Enter the Checkout information</doc>
+<status status="PASS" start="2025-06-08T23:15:40.093117" elapsed="3.016200"/>
+</kw>
+<kw name="Validate the Products on Checkout" owner="CheckoutPage">
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.111444" elapsed="0.030678"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:43.168909" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.142522" elapsed="0.026600"/>
+</kw>
+<var name="${Product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2025-06-08T23:15:43.111244" elapsed="0.058023"/>
+</iter>
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.169845" elapsed="0.037896"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:43.232775" level="INFO">Current page contains text 'Sauce Labs Bike Light'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.208140" elapsed="0.024840"/>
+</kw>
+<var name="${Product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2025-06-08T23:15:43.169556" elapsed="0.063565"/>
+</iter>
+<iter>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.233926" elapsed="0.035912"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:43.295633" level="INFO">Current page contains text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>${Product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.270252" elapsed="0.025679"/>
+</kw>
+<var name="${Product}">Sauce Labs Fleece Jacket</var>
+<status status="PASS" start="2025-06-08T23:15:43.233583" elapsed="0.062495"/>
+</iter>
+<var>${Product}</var>
+<value>@{Products_name}</value>
+<status status="PASS" start="2025-06-08T23:15:43.110981" elapsed="0.185202"/>
+</for>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-08T23:15:43.476299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/Checkout_Page.png"&gt;&lt;img src="../Screenshots/Checkout_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/Checkout_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.296515" elapsed="0.180039"/>
+</kw>
+<arg>@{Products}</arg>
+<tag>Checkout page</tag>
+<doc>Validate the Products in the Checkout Page</doc>
+<status status="PASS" start="2025-06-08T23:15:43.110427" elapsed="0.366416"/>
+</kw>
+<kw name="Shutdown Automation" owner="LoginPage">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-08T23:15:43.478286" elapsed="2.339560"/>
+</kw>
+<tag>Stop</tag>
+<doc>Shutdown all browser</doc>
+<status status="PASS" start="2025-06-08T23:15:43.477762" elapsed="2.340526"/>
+</kw>
+<status status="PASS" start="2025-06-08T23:15:22.879685" elapsed="22.939676"/>
 </test>
 <doc>Test Suit for SauceLab Demo Login</doc>
-<status status="PASS" start="2025-06-07T23:49:08.512302" elapsed="38.895985"/>
+<status status="PASS" start="2025-06-08T23:14:48.770084" elapsed="57.052713"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TestSauceDemo" id="s1" pass="2" fail="0" skip="0">TestSauceDemo</stat>
+<stat name="TestSauceDemo" id="s1" pass="4" fail="0" skip="0">TestSauceDemo</stat>
 </suite>
 </statistics>
 <errors>
